@@ -36,7 +36,7 @@ for x in hostname:
 #data=pd.DataFrame({'Hostname':nomehosttrigger,'Triggers':triggers,'Severidade':severidade})
 #data.to_csv('triggers_hosts.csv',index=False)
 
-csv_out = open('Zabbix-Hosts_Triggers.csv','wb')
+csv_out = open('triggers_hosts.csv','wb')
 
 mywriter = csv.writer(csv_out)
 
