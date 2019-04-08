@@ -1,9 +1,9 @@
 #!/bin/python
 from pyzabbix import ZabbixAPI
 
-zapi = ZabbixAPI("http://localhost/zabbix")
-zapi.login("Admin", "zabbix")
-print("Connected to Zabbix API Version %s" % zapi.api_version() + "\n")
+zapi = ZabbixAPI('http://localhost/zabbix')
+zapi.login('Admin', 'zabbix')
+print('Connected to Zabbix API Version %s' % zapi.api_version() + '\n')
 
 # Get a list of all issues (AKA tripped triggers)
 triggers = zapi.trigger.get(only_true=1,
@@ -30,10 +30,10 @@ for t in triggers:
     t['unacknowledged'] = True if t['triggerid'] in unack_trigger_ids \
         else False
 
-# Print a list containing only "tripped" triggers
+# Print a list containing only 'tripped' triggers
 for t in triggers:
     if int(t['value']) == 1:
-        print("{0} - {1} {2}".format(t['hosts'][0]['host'],
+        print('{0} - {1} {2}'.format(t['hosts'][0]['host'],
                                      t['description'],
                                      '(Unack)' if t['unacknowledged'] else '')
               )
