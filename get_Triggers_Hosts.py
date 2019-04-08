@@ -15,7 +15,7 @@ dicionario = {'1':'Information', '2':'Warning', '3':'Average', '4':'High', '5':'
 
 zapi = ZabbixAPI('http://localhost/zabbix')
 zapi.login('Admin', 'zabbix')
-print(zapi.api_version())
+#print(zapi.api_version())
 
 
 for l in zapi.host.get(output='extend'):
