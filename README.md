@@ -9,3 +9,5 @@ zabbix管理資料
 curl -kL https://bootstrap.pypa.io/get-pip.py | python
 pip install pyzabbix
 ```
+
+※user/passwordは適宜変更
