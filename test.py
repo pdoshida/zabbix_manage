@@ -12,5 +12,8 @@ templates = zapi.template.get(
   selectHttpTests=['httptestid']
 )
 
+t = '\t'
+
+# get template
 for tp in filter(lambda tps: not 'Template' in tps['name'], templates):
   print(tp['name'])
